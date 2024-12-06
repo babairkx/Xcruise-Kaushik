@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+a, button{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+/* mobile */
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+.menu{
+    padding-bottom: 0.625rem;
+}
+.navbar{
+    background-color: rgb(0, 0, 51);
+    justify-items: center;
+}
+.navbar a{
+    padding: 0.625rem;
+}
+ul{
+    padding-inline-start: 0px;
+    display: flex;
+}
+li{
+    list-style: none;
+}
+.hero{
+    background-image: url(https://github.com/Mohak-Trivedi/xcruise-assets/blob/master/hero-cruise.png?raw=true);
+    background-size: 100% 100%;
+    height: 50vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;   
+}
+.hero h1{
+    color: #fff;
+    font-size: 3vw;
+    margin-bottom: 0.8vw;
+    padding: 1.5vw;
+}
+.hero button{
+    border: 1px solid transparent;
+    border-radius: 0.5vw;
+    background-color: red;
+    padding: 1vw;
+    color: #fff;
+}
+.discover{    
+    margin: 2.5rem;
+}
+.pill{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.625rem;
+    border-radius: 1.25rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 0.25rem;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pill img{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-left: 0.15rem;
+}
+.heading{
+    text-align: center;
+}
+.popular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: fit-content;
+    gap: 10px;
+
+}
+.card{
+    cursor: pointer
+}
+.grid-data{
+    position: relative;
+    width: 100%;
+    height:100%;
+}
+.images img{
+    height: 200px;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+.text-para{
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 20px;
+}
+.icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+}
+.icon img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+}
+#contact{
+    margin: 2rem 5rem;
+}
+#contact h3{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: orange; 
+    text-decoration-thickness: 3px; 
+    text-underline-offset: 8px;
+}
+.contact_info{
+    margin-top: 20px;
+}
+.contact_info div{
+    border: 1px solid black;
+    text-align: center;
+}
+.contact_info div:first-child{
+    margin-bottom: 20px;
+}
+footer{
+    background-color: #10044a;
+}
+.footer-text{
+    justify-items: center;
+    padding-top: 10px;
+}
+.footer_content{
+    text-align: center;
+    margin: 10px 0px;
+}
+.footer_content h3{
+    color: rgb(255, 183, 3);
+}
+.footer_content img{
+    width: 30px;
+    height: 30px;
+}
+.footer_rights{
+    border-top: 0.5px solid rgba(139, 131, 131, 0.5);
+    text-align: center;
+}
+.footer_rights p{
+    padding-bottom: 20px;
+}
+#pad{
+    padding-bottom: 10px;
+}
+/* tablets */
+@media (min-width: 480px){
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        padding-bottom: 0px;
+        padding-right: 0.625rem;
+    }
+    .logo{
+        padding-left: 0.625rem;
+    }
+    .heading{
+        border-left: .625rem solid orange;
+        padding: 0rem 0.625rem;
+    }
+    .popular{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .pills{
+        display: flex;
+    }
+    #grid-container{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: fit-content;
+    }
+    #banner{
+        padding-top: 10px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+/* desktop */
+@media (min-width: 768px){    
+    .heading{
+        text-align: unset;
+    }
+    #grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: fit-content;
+    }
+    #banner{
+        padding-top: 15px;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .contact_info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        grid-template-rows: min-content;
+    }
+    .contact_info div:last-child{
+        height: min-content;
+    }
+    .footer-text{
+        justify-items: unset;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
